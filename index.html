@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Properties | Luxury Real Estate Brokerage in Pune</title>
+    <meta name="description" content="Buy, Sell, Rent & Invest in premium residential and commercial properties across Pune's prime locations with RK Properties.">
+    <meta name="keywords" content="Real Estate Pune, Luxury Apartments Pune, RK Properties, Mahalunge, Balewadi, Baner, Hinjewadi, Buy Property Pune, Bavdhan">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-dark: #0F172A;
+            --gold: #D4AF37;
+            --gold-hover: #AA8B2C;
+            --luxury-white: #FAFAFA;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--luxury-white);
+        }
+        .font-luxury {
+            font-family: 'Cinzel', serif;
+        }
+        .bg-navy { background-color: var(--navy-dark); }
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .bg-gold:hover { background-color: var(--gold-hover); }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .transition-premium {
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Top Info utility ribbon bar -->
+    <div class="bg-navy text-xs text-slate-300 py-2.5 px-4 border-b border-slate-800 hidden xl:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex gap-6">
+                <a href="tel:+918767845026" class="hover:text-gold transition-premium"><i class="fa-solid fa-phone text-gold mr-1.5"></i>+91 8767845026</a>
+                <a href="tel:+919322251693" class="hover:text-gold transition-premium"><i class="fa-solid fa-phone text-gold mr-1.5"></i>+91 93222 51693</a>
+                <a href="mailto:rkproperties8767@gmail.com" class="hover:text-gold transition-premium"><i class="fa-solid fa-envelope text-gold mr-1.5"></i>rkproperties8767@gmail.com</a>
+            </div>
+            <div>
+                <span class="text-slate-400 font-medium tracking-wider uppercase">Premium Realty Suite</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Global Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur-md shadow-xl border-b border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <a href="#" class="flex flex-col">
+                <span class="font-luxury text-2xl tracking-widest text-gold font-bold">RK PROPERTIES</span>
+                <span class="text-[9px] text-slate-400 tracking-[0.3em] uppercase -mt-1">Luxury Real Estate Brokerage</span>
+            </a>
+            
+            <nav class="hidden lg:flex gap-6 xl:gap-8 text-sm font-semibold tracking-wide uppercase text-slate-200">
+                <a href="#" class="hover:text-gold transition-premium">Home</a>
+                <a href="#services" class="hover:text-gold transition-premium">Services</a>
+                <a href="#areas" class="hover:text-gold transition-premium">Areas Served</a>
+                <a href="#why-choose-us" class="hover:text-gold transition-premium">Why Us</a>
+                <a href="#contact" class="hover:text-gold transition-premium">Contact</a>
+            </nav>
+
+            <div class="hidden sm:flex gap-2.5">
+                <a href="https://wa.me/918767845026" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-md text-xs font-medium flex items-center gap-1.5 shadow-lg transition-premium">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp 1
+                </a>
+                <a href="https://wa.me/919322251693" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-md text-xs font-medium flex items-center gap-1.5 shadow-lg transition-premium">
+                    <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp 2
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-200 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy border-t border-slate-800 transition-all duration-300 ease-in-out">
+            <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col text-slate-200 font-medium tracking-wide">
+                <a href="#" class="mobile-link py-2 border-b border-slate-800/50 hover:text-gold">Home</a>
+                <a href="#services" class="mobile-link py-2 border-b border-slate-800/50 hover:text-gold">Services</a>
+                <a href="#areas" class="mobile-link py-2 border-b border-slate-800/50 hover:text-gold">Areas Served</a>
+                <a href="#why-choose-us" class="mobile-link py-2 border-b border-slate-800/50 hover:text-gold">Why Us</a>
+                <a href="#contact" class="mobile-link py-2 hover:text-gold">Contact</a>
+                <div class="pt-4 grid grid-cols-2 gap-2">
+                    <a href="tel:+918767845026" class="text-center bg-gold text-navy font-bold py-2 rounded-md text-xs shadow-md"><i class="fa-solid fa-phone mr-1"></i>Call 1</a>
+                    <a href="tel:+919322251693" class="text-center bg-gold text-navy font-bold py-2 rounded-md text-xs shadow-md"><i class="fa-solid fa-phone mr-1"></i>Call 2</a>
+                    <a href="https://wa.me/918767845026" target="_blank" class="text-center bg-emerald-600 text-white font-bold py-2 rounded-md text-xs shadow-md"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp 1</a>
+                    <a href="https://wa.me/919322251693" target="_blank" class="text-center bg-emerald-600 text-white font-bold py-2 rounded-md text-xs shadow-md"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp 2</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero-bg relative min-h-[85vh] flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl mx-auto py-16">
+            <span class="text-gold uppercase tracking-[0.4em] font-bold text-xs sm:text-sm block mb-4">Redefining Bespoke Living</span>
+            <h1 class="font-luxury text-4xl sm:text-5xl md:text-6xl text-white font-bold tracking-tight leading-tight mb-6">
+                Your Trusted Real Estate Partner in Pune
+            </h1>
+            <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Buy, Sell, Rent & Invest in Premium Properties Across Pune
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto">
+                <div class="flex w-full gap-3">
+                    <a href="tel:+918767845026" class="w-full px-4 py-3.5 bg-gold text-navy font-bold rounded-md shadow-2xl transition-premium tracking-wide uppercase text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Desk 1
+                    </a>
+                    <a href="tel:+919322251693" class="w-full px-4 py-3.5 bg-gold text-navy font-bold rounded-md shadow-2xl transition-premium tracking-wide uppercase text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Desk 2
+                    </a>
+                </div>
+                <div class="flex w-full gap-3">
+                    <a href="https://wa.me/918767845026" target="_blank" class="w-full px-4 py-3.5 bg-transparent border-2 border-white text-white hover:bg-white hover:text-navy font-bold rounded-md shadow-2xl transition-premium tracking-wide uppercase text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Chat 1
+                    </a>
+                    <a href="https://wa.me/919322251693" target="_blank" class="w-full px-4 py-3.5 bg-transparent border-2 border-white text-white hover:bg-white hover:text-navy font-bold rounded-md shadow-2xl transition-premium tracking-wide uppercase text-xs sm:text-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Chat 2
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-slate-400 animate-bounce hidden md:block">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </div>
+    </section>
+
+    <!-- Operational Core Services Grid -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-widest text-xs uppercase block mb-2">Our Expertise</span>
+                <h2 class="font-luxury text-3xl sm:text-4xl text-navy font-bold">Bespoke Real Estate Services</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-transparent hover:border-gold transition-premium group">
+                    <div class="w-14 h-14 rounded-lg bg-slate-900/5 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-navy group-hover:text-gold transition-premium">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="font-luxury text-xl font-bold mb-3 text-navy">Buy Property</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Discover curated high-end residential listings tailored precisely to your personal aesthetic and spatial choices.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-transparent hover:border-gold transition-premium group">
+                    <div class="w-14 h-14 rounded-lg bg-slate-900/5 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-navy group-hover:text-gold transition-premium">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="font-luxury text-xl font-bold mb-3 text-navy">Sell Property</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Maximize target net yields for assets via data-driven targeted global premium investor visibility frameworks.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-transparent hover:border-gold transition-premium group">
+                    <div class="w-14 h-14 rounded-lg bg-slate-900/5 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-navy group-hover:text-gold transition-premium">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="font-luxury text-xl font-bold mb-3 text-navy">Rental Services</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Flawless match-making ecosystems matching high profile global tenants to ultra luxury properties smoothly.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-transparent hover:border-gold transition-premium group">
+                    <div class="w-14 h-14 rounded-lg bg-slate-900/5 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-navy group-hover:text-gold transition-premium">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-luxury text-xl font-bold mb-3 text-navy">Property Investment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Leverage hyper-local historical intelligence mapping algorithms to capture elite double-digit yield options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographic Footprint Section -->
+    <section id="areas" class="py-20 bg-navy text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-widest text-xs uppercase block mb-2">Prime Territories</span>
+                <h2 class="font-luxury text-3xl sm:text-4xl text-white font-bold">Elite Strategic Micro-Markets Across Pune</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Mahalunge</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Balewadi</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Baner</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Bavdhan</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Pashan</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Hinjewadi</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Wakad</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl h-44 flex items-center justify-center border border-gold/20 hover:border-gold/60 transition-premium bg-slate-900/40">
+                    <div class="text-center z-10 p-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mb-2 block"></i>
+                        <h4 class="font-luxury font-bold tracking-wider text-base md:text-lg">Pimple Nilakh</h4>
+                    </div>
+                    <div class="absolute inset-0 bg-gold/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="why-choose-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2">
+                    <span class="text-gold font-bold tracking-widest text-xs uppercase block mb-2">Our Signature Philosophy</span>
+                    <h2 class="font-luxury text-3xl sm:text-4xl text-navy font-bold mb-6">Why High-Net-Worth Individuals Choose RK Properties</h2>
+                    <div class="w-24 h-1 bg-gold mb-8"></div>
+                    <p class="text-slate-600 leading-relaxed mb-8">We reject cookie-cutter real estate models. Through customized market discovery, transparency, and tailored support infrastructures, we create unmatched transactional fluidity for our buyers.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-gold"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-lg">Verified Properties</h4>
+                                <p class="text-slate-500 text-sm">Every asset is rigorous title-checked and physically cross-verified by compliance metrics.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-gold"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-lg">Local Market Expertise</h4>
+                                <p class="text-slate-500 text-sm">Deep, hyper-local spatial predictive pricing intelligence driving transactional advantages.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-gold"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-lg">Transparent Deals</h4>
+                                <p class="text-slate-500 text-sm">Zero hidden fee markups, verified structures, clear structural operational models.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-gold"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-navy text-lg">Personalized Property Search</h4>
+                                <p class="text-slate-500 text-sm">We find choices dynamically targeted around custom individual preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Luxury Real Estate" class="rounded-lg shadow-xl w-full h-72 object-cover">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" alt="Premium Spaces" class="rounded-lg shadow-xl w-full h-72 object-cover mt-6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Communication Pipeline Section -->
+    <section id="contact" class="py-20 bg-slate-900 text-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-gold font-bold tracking-widest text-xs uppercase block mb-2">Connect Instantly</span>
+                    <h2 class="font-luxury text-3xl sm:text-4xl font-bold mb-6 text-white">Initiate a Strategic Consultation</h2>
+                    <p class="text-slate-400 text-sm mb-8">Reach out via our prioritized secure channels or submit your precise dynamic acquisition preferences below.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-gold text-lg shrink-0"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Call / Voice Desks</p>
+                                <div class="flex flex-col gap-1">
+                                    <a href="tel:+918767845026" class="text-lg font-semibold text-white hover:text-gold transition-premium">+91 8767845026</a>
+                                    <a href="tel:+919322251693" class="text-lg font-semibold text-white hover:text-gold transition-premium">+91 93222 51693</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-emerald-400 text-xl shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase tracking-widest mb-1">Direct WhatsApp Portals</p>
+                                <div class="flex flex-col gap-1">
+                                    <a href="https://wa.me/918767845026" target="_blank" class="text-lg font-semibold text-white hover:text-emerald-400 transition-premium">+91 8767845026 (Line 1)</a>
+                                    <a href="https://wa.me/919322251693" target="_blank" class="text-lg font-semibold text-white hover:text-emerald-400 transition-premium">+91 93222 51693 (Line 2)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-gold text-lg shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase tracking-widest">Mailing Desk</p>
+                                <a href="mailto:rkproperties8767@gmail.com" class="text-base text-slate-200 hover:text-gold transition-premium break-all">rkproperties8767@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 shadow-2xl">
+                    <h3 class="font-luxury text-xl text-gold mb-6 font-bold tracking-wide">Submit Mandate Profile</h3>
+                    <form id="contact-mandate-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label class="block text-xs text-slate-400 uppercase tracking-wider mb-2">Full Name</label>
+                            <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-premium">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 uppercase tracking-wider mb-2">Phone Number</label>
+                            <input type="tel" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-premium">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 uppercase tracking-wider mb-2">Requirements / Message</label>
+                            <textarea rows="3" placeholder="Describe property types or location preferences..." class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-premium"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold hover:bg-gold-hover text-navy font-bold py-3.5 px-4 rounded-lg text-sm uppercase tracking-widest transition-premium shadow-lg mt-2">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Footer Area -->
+    <footer class="bg-navy text-slate-400 pt-12 pb-6 border-t border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6 border-b border-slate-800/60 pb-8 mb-6">
+                <div>
+                    <span class="font-luxury text-xl tracking-widest text-gold font-bold">RK PROPERTIES</span>
+                    <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Premium Real Estate Brokerage Suite</p>
+                </div>
+                <div class="text-xs text-slate-500">
+                    &copy; 2026 RK Properties. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Scripts Component -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for connecting with RK Properties. Your consultation submission has been logged securely, and our team will contact you shortly.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
